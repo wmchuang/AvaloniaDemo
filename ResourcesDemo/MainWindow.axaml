@@ -1,0 +1,49 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d"
+        Width="300"
+        Height="400"
+		x:Class="ResourcesDemo.MainWindow"
+        Title="ResourcesDemo">
+	<Window.Resources>
+		<ResourceDictionary>
+			<ResourceDictionary.MergedDictionaries>
+				<ResourceInclude Source="/Resources/BaseResource.axaml"/>
+			</ResourceDictionary.MergedDictionaries>
+		</ResourceDictionary>
+	</Window.Resources>
+
+	<Window.Styles>
+		<StyleInclude Source="/Styles/BorderStyle.axaml"/>
+	</Window.Styles>
+	<Grid>
+		<Grid.ColumnDefinitions>
+			<ColumnDefinition />
+			<ColumnDefinition />
+		</Grid.ColumnDefinitions>
+
+		<StackPanel Orientation="Vertical"
+			HorizontalAlignment="Left" Grid.Column="0">
+			<StackPanel.Resources>
+				<SolidColorBrush x:Key="Fail" Color="Orange" />
+			</StackPanel.Resources>
+			<Border Background="{DynamicResource Warning}"/>
+
+			<Border Background="{DynamicResource Success}"/>
+
+			<Border Background="{DynamicResource Error}"/>
+			<Border Background="{StaticResource Fail}"/>
+		</StackPanel>
+
+		<StackPanel Orientation="Vertical"
+					HorizontalAlignment="Left" Grid.Column="1">
+			<StackPanel.Resources>
+				<SolidColorBrush x:Key="Fail" Color="Orange" />
+			</StackPanel.Resources>
+			<Border Background="{StaticResource Fail}"/>
+		</StackPanel>
+
+	</Grid>
+</Window>

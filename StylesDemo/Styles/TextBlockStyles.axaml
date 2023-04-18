@@ -1,0 +1,25 @@
+﻿<Styles xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+		>
+	
+    <Design.PreviewWith>
+        <Border Padding="20">
+            <!-- Add Controls for Previewer Here -->
+        </Border>
+    </Design.PreviewWith>
+
+    <!-- Add Styles Here -->
+	<Style Selector="TextBlock">
+		<Setter Property="Foreground" Value="Red"/>
+	</Style>
+
+
+	
+	<Style Selector="TextBlock.Big">
+		<Setter Property="FontSize" Value="30"/>
+	</Style>
+
+	<Style Selector="TextBlock.Black">
+		<Setter Property="Background" Value="Black"/>
+	</Style>
+</Styles>

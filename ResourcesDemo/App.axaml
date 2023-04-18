@@ -1,0 +1,15 @@
+<Application xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             x:Class="ResourcesDemo.App">
+	<Application.Resources>
+		<SolidColorBrush x:Key="Warning"  
+						 Color="Yellow" />
+		
+		<SolidColorBrush x:Key="Success"
+					 Color="Green" />
+		
+	</Application.Resources>
+    <Application.Styles>
+        <FluentTheme Mode="Light"/>
+    </Application.Styles>
+</Application>

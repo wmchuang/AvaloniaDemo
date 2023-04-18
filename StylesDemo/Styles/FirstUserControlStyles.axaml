@@ -1,0 +1,19 @@
+﻿<Styles xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+		xmlns:local="clr-namespace:StylesDemo.Controls">
+    <Design.PreviewWith>
+        <Border Padding="20">
+			<local:FirstUserControl/>
+            <!-- Add Controls for Previewer Here -->
+        </Border>
+    </Design.PreviewWith>
+
+    <!-- Add Styles Here -->
+	
+	<Style Selector=":is(local|FirstUserControl)">
+		<Setter Property="Background" Value="Green"/>
+	</Style>
+	<!--<Style Selector="local|FirstUserControl">
+		<Setter Property="Background" Value="Blue"/>
+	</Style>-->
+</Styles>
