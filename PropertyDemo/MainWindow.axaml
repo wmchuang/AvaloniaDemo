@@ -2,8 +2,30 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+        xmlns:uc="clr-namespace:PropertyDemo.UserControls"
+		mc:Ignorable="d" d:DesignWidth="200" d:DesignHeight="450"
         x:Class="PropertyDemo.MainWindow"
         Title="PropertyDemo">
-    Welcome to Avalonia!
+	<Grid>
+		<Grid.RowDefinitions>
+			<RowDefinition />
+			<RowDefinition />
+			<RowDefinition />
+		</Grid.RowDefinitions>
+		<StackPanel Orientation="Vertical">
+			<TextBlock Text="直接属性" FontWeight="Bold"/>
+			<uc:DirectView Value="30"/>
+
+		</StackPanel>
+		<StackPanel Orientation="Vertical" Grid.Row="1">
+			<TextBlock Text="样式属性" FontWeight="Bold"/>
+			<uc:StyleView Value="30"/>
+
+		</StackPanel>
+		<StackPanel Orientation="Vertical" Grid.Row="2">
+			<TextBlock Text="附加属性" FontWeight="Bold"/>
+			<uc:AttachView uc:AttachView.Value="20"/>
+
+		</StackPanel>
+	</Grid>
 </Window>
