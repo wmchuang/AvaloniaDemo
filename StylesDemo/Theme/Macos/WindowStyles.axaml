@@ -8,6 +8,6 @@
 
     <!-- Add Styles Here -->
 	<Style Selector="Window">
-		<Setter Property="Background" Value="OrangeRed"/>
+		<Setter Property="Background" Value="White"/>
 	</Style>
 </Styles>

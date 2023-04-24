@@ -1,0 +1,10 @@
+public $propertyType$ $propertyName$
+{
+  get => GetValue($propertyName$Property);
+  set => SetValue($propertyName$Property, value);
+}
+
+public static readonly StyledProperty<$propertyType$> $propertyName$Property = AvaloniaProperty.Register<$classname$, $propertyType$>
+            (
+                nameof($propertyName$)
+            );

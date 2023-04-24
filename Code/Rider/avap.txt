@@ -1,0 +1,15 @@
+public static $propertyType$ Get$propertyName$ (AvaloniaObject obj)
+{
+    return obj.GetValue($propertyName$Property);
+}
+
+        public static void Set$propertyName$ (AvaloniaObject obj, $propertyType$ value)
+        {
+            obj.SetValue($propertyName$Property, value);
+        }
+
+        public static readonly AttachedProperty<$propertyType$> $propertyName$Property =
+            AvaloniaProperty.RegisterAttached<$classname$, IControl, $propertyType$>
+            (
+                "$propertyName$"
+            );

@@ -1,0 +1,28 @@
+﻿<Styles xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:cv="clr-namespace:TemplatedControlDemo.Convers"
+        xmlns:uc="clr-namespace:TemplatedControlDemo.Controls">
+    <Design.PreviewWith>
+        <Border Padding="20">
+            <!-- Add Controls for Previewer Here -->
+        </Border>
+    </Design.PreviewWith>
+
+    <!-- Add Styles Here -->
+    <Style Selector="uc|MenuControl">
+        <Style.Resources>
+            <cv:StringToImageSourceConverter x:Key="ToImage"/>
+        </Style.Resources>
+        <Setter Property="Template">
+            <ControlTemplate>
+                <StackPanel Orientation="Vertical" HorizontalAlignment="Center">
+                    <TextBlock Text="用户控件" HorizontalAlignment="Center"/>
+                    <Image Source="{Binding MenuImg,RelativeSource={RelativeSource TemplatedParent},Converter={StaticResource ToImage}}"></Image>
+                    
+                    <TextBlock Text="{Binding MenuImg, RelativeSource={RelativeSource TemplatedParent}}" HorizontalAlignment="Center"/>
+                    <TextBlock Text="{Binding MenuName, RelativeSource={RelativeSource TemplatedParent}}" HorizontalAlignment="Center"/>
+                </StackPanel>
+            </ControlTemplate>
+        </Setter>
+    </Style>
+</Styles>
