@@ -27,4 +27,14 @@ public class MenuControl : TemplatedControl
         nameof(MenuImg)
     );
 
+    public string MenuSelectImg
+    {
+        get => GetValue(MenuSelectImgProperty);
+        set => SetValue(MenuSelectImgProperty, value);
+    }
+
+    public static readonly StyledProperty<string> MenuSelectImgProperty = AvaloniaProperty.Register<MenuControl, string>
+    (
+        nameof(MenuSelectImg)
+    );
 }

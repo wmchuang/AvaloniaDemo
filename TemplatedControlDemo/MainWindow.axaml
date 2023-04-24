@@ -12,5 +12,10 @@
         <StyleInclude Source="/Styles/MenuControlStyle.axaml"></StyleInclude>
     </Window.Styles>
     
-   <uc:MenuControl MenuName="影音播放" MenuImg="Assets/video.png"/>
+    <StackPanel Orientation="Vertical" Spacing="50">
+        <uc:MenuControl MenuName="影音播放" MenuImg="video.png" MenuSelectImg="video1.png"/>
+        
+        <uc:MenuControl Classes="Horizontal" MenuName="影音播放" MenuImg="video.png" MenuSelectImg="video1.png"/>
+        
+    </StackPanel>
 </Window>

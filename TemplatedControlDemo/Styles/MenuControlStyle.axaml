@@ -7,22 +7,42 @@
             <!-- Add Controls for Previewer Here -->
         </Border>
     </Design.PreviewWith>
+    <Styles.Resources>
+        <cv:StringToImageSourceConverter x:Key="ToImage" />
+    </Styles.Resources>
 
     <!-- Add Styles Here -->
     <Style Selector="uc|MenuControl">
-        <Style.Resources>
-            <cv:StringToImageSourceConverter x:Key="ToImage"/>
-        </Style.Resources>
         <Setter Property="Template">
             <ControlTemplate>
                 <StackPanel Orientation="Vertical" HorizontalAlignment="Center">
-                    <TextBlock Text="用户控件" HorizontalAlignment="Center"/>
-                    <Image Source="{Binding MenuImg,RelativeSource={RelativeSource TemplatedParent},Converter={StaticResource ToImage}}"></Image>
-                    
-                    <TextBlock Text="{Binding MenuImg, RelativeSource={RelativeSource TemplatedParent}}" HorizontalAlignment="Center"/>
-                    <TextBlock Text="{Binding MenuName, RelativeSource={RelativeSource TemplatedParent}}" HorizontalAlignment="Center"/>
+                    <Image Width="50" Height="50"></Image>
+                    <TextBlock Text="{Binding MenuName, RelativeSource={RelativeSource TemplatedParent}}" HorizontalAlignment="Center" />
                 </StackPanel>
             </ControlTemplate>
         </Setter>
+    </Style>
+
+    <Style Selector="uc|MenuControl.Horizontal">
+        <Setter Property="Template">
+            <ControlTemplate>
+                <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                    <Image Width="25" Height="25"></Image>
+                    <TextBlock FontSize="20"
+                               Text="{Binding MenuName, RelativeSource={RelativeSource TemplatedParent}}" HorizontalAlignment="Center" />
+                </StackPanel>
+            </ControlTemplate>
+        </Setter>
+    </Style>
+
+    <Style Selector="uc|MenuControl > StackPanel Image">
+        <Setter Property="Source" Value="{Binding MenuImg,RelativeSource={RelativeSource TemplatedParent},Converter={StaticResource ToImage}}" />
+    </Style>
+
+    <Style Selector="uc|MenuControl > StackPanel:pointerover Image">
+        <Setter Property="Source" Value="{Binding MenuSelectImg,RelativeSource={RelativeSource TemplatedParent},Converter={StaticResource ToImage}}" />
+    </Style>
+    <Style Selector="uc|MenuControl > StackPanel:pointerover TextBlock">
+        <Setter Property="Foreground" Value="Red" />
     </Style>
 </Styles>
