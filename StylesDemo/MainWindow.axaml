@@ -5,13 +5,17 @@
         mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
         x:Class="StylesDemo.MainWindow"
         Title="StylesDemo">
-
-	<StackPanel Spacing="10" 
-				VerticalAlignment="Center">
-		<TextBlock Name="tb" Text="Welcome to Avalonia!" />
-		
-		<TextBlock Classes="Big" Text="Welcome to Avalonia!" />
-
-		<Button Name="btnChange" Content="点击改变"/>
-	</StackPanel>
+<Grid>
+    <!-- <TextBlock Text="123" /> -->
+    
+    <Line Fill="Red"
+          Stroke="Blue"
+          StrokeThickness="1"
+          StrokeDashArray="5"
+          StartPoint="0 50"
+          EndPoint="200 50" />
+    
+</Grid>
+  
+    
 </Window>

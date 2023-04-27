@@ -1,9 +1,15 @@
 <Application xmlns="https://github.com/avaloniaui"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+            RequestedThemeVariant="Light"
              x:Class="StylesDemo.App">
     <Application.Styles>
-        <FluentTheme Mode="Light"/>
+		<FluentTheme/>
 		<StyleInclude Source="/Styles/FirstUserControlStyles.axaml" />
 		<StyleInclude Source="/Styles/TextBlockStyles.axaml"/>
+        
+        <!--<StyleInclude Source="avares://StylesLibary/Theme.axaml" />-->
+        
+        <!--<StyleInclude Source="avares://StylesLibary/ButtonStyle.axaml" />-->
+
     </Application.Styles>
 </Application>
