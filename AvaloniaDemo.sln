@@ -25,6 +25,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ScrollViewerDemo", "ScrollV
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ScrollDemo", "ScrollDemo\ScrollDemo.csproj", "{27686F34-9C46-441C-8772-30C650F32C80}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "线程异常捕捉", "线程异常捕捉\线程异常捕捉.csproj", "{017C4E0E-6FFF-4060-A2F7-3AE96634D45A}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -75,6 +77,10 @@ Global
 		{27686F34-9C46-441C-8772-30C650F32C80}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{27686F34-9C46-441C-8772-30C650F32C80}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{27686F34-9C46-441C-8772-30C650F32C80}.Release|Any CPU.Build.0 = Release|Any CPU
+		{017C4E0E-6FFF-4060-A2F7-3AE96634D45A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{017C4E0E-6FFF-4060-A2F7-3AE96634D45A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{017C4E0E-6FFF-4060-A2F7-3AE96634D45A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{017C4E0E-6FFF-4060-A2F7-3AE96634D45A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
