@@ -15,14 +15,15 @@ public partial class MainWindow : Window
     {
         var vm = (MainWindowViewModel)DataContext;
         var t = (ScrollViewer)sender;
-        Console.WriteLine($"偏移量：{t.Offset.Length}");
-        Console.WriteLine($"可滚动内容范围：{t.Extent.Height}");
-        Console.WriteLine($"设计时高度：{t.DesiredSize.Height}");
-        Console.WriteLine($"总高度：{t.Extent.Height - t.DesiredSize.Height}");
-        if (t.Offset.Length >= t.Extent.Height - t.DesiredSize.Height - 50)
+        
+        // Console.WriteLine($"偏移量：{t.Offset.Length}");
+        // Console.WriteLine($"可滚动内容范围：{t.Extent.Height}");
+        // Console.WriteLine($"窗体高度：{t.DesiredSize.Height}");
+        // Console.WriteLine($"计算后的高度：{t.Extent.Height - (t.DesiredSize.Height *2)}");
+        
+        if (t.Offset.Length >= t.Extent.Height - (t.DesiredSize.Height *2))
         {
             vm.Load();
         }
-
     }
 }

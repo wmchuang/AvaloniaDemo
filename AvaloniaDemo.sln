@@ -23,6 +23,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DesignDataDemo", "DesignDat
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ScrollViewerDemo", "ScrollViewerDemo\ScrollViewerDemo.csproj", "{71219BD4-02F0-4D81-95C0-813EBF41AF1E}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ScrollDemo", "ScrollDemo\ScrollDemo.csproj", "{27686F34-9C46-441C-8772-30C650F32C80}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -69,6 +71,10 @@ Global
 		{71219BD4-02F0-4D81-95C0-813EBF41AF1E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{71219BD4-02F0-4D81-95C0-813EBF41AF1E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{71219BD4-02F0-4D81-95C0-813EBF41AF1E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{27686F34-9C46-441C-8772-30C650F32C80}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{27686F34-9C46-441C-8772-30C650F32C80}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{27686F34-9C46-441C-8772-30C650F32C80}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{27686F34-9C46-441C-8772-30C650F32C80}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
