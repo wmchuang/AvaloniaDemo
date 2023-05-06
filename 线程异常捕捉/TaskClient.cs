@@ -6,12 +6,15 @@ namespace 线程异常捕捉;
 
 public static class TaskClient
 {
-    public static Task Run(Func<Task> function, Action? finallyDo = null)
+    public static Task Run(Func<Task> function, Action? catchDo = null)
     {
+        // return Task.Run(() =>
+        // {
         var task = function();
-        task.Execute(finallyDo);
+        task.Execute(catchDo);
 
         return task;
+        // });
     }
 
     public static Task Run(Action action)
@@ -21,7 +24,7 @@ public static class TaskClient
         return task;
     }
 
-    private static void Execute(this Task task, Action? finallyDo = null)
+    private static void Execute(this Task task, Action? catchDo = null)
     {
         task.ContinueWith(t =>
         {
@@ -29,10 +32,9 @@ public static class TaskClient
             {
                 Console.WriteLine("捕获到异常");
                 Console.WriteLine($"异常信息:    {ex.Message}");
+                catchDo?.Invoke();
                 return true;
             });
         }, TaskContinuationOptions.OnlyOnFaulted);
-        if (finallyDo != null)
-            task.ContinueWith(_ => finallyDo);
     }
 }
