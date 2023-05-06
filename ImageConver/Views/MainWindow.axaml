@@ -1,0 +1,44 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:vm="using:ImageConver.ViewModels"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:cv="clr-namespace:ImageConver;assembly=ImageConver"
+        mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+        x:Class="ImageConver.Views.MainWindow"
+        x:DataType="vm:MainWindowViewModel"
+        Icon="/Assets/avalonia-logo.ico"
+        Title="ImageConver">
+
+    <Design.DataContext>
+        <!-- This only sets the DataContext for the previewer in an IDE,
+             to set the actual DataContext for runtime, set the DataContext property in code (look at App.axaml.cs) -->
+        <vm:MainWindowViewModel />
+    </Design.DataContext>
+
+    <Window.Resources>
+        <cv:StringToImageConverter x:Key="ImageSourceConverter"></cv:StringToImageConverter>
+    </Window.Resources>
+
+
+    <DockPanel>
+        <StackPanel Orientation="Horizontal">
+            <ItemsControl Items="{Binding List}" HorizontalAlignment="Center">
+                <ItemsControl.ItemTemplate>
+                    <DataTemplate>
+                        <Image Source="{Binding  Converter={x:Static cv:StringToImageConverter.Instance}}" Width="150"
+                               Height="150">
+                        </Image>
+
+                        <!-- 这样的图片比较大的时候，内存涨的很快 -->
+						<!--<Image Source="{Binding  Converter={StaticResource ImageSourceConverter}}" Width="150"
+							  Height="150">
+						</Image>-->
+                    </DataTemplate>
+                </ItemsControl.ItemTemplate>
+            </ItemsControl>
+        </StackPanel>
+        <Button Content="添加" VerticalAlignment="Bottom" Height="50" Width="100" DockPanel.Dock="Bottom" 
+                Click="Button_OnClick"/>
+    </DockPanel>
+</Window>
