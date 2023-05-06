@@ -29,6 +29,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "线程异常捕捉", "线�
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ImageConver", "ImageConver\ImageConver.csproj", "{1508AD42-80D0-4162-A653-A3EA903C4DAE}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CacheDemo", "CacheDemo\CacheDemo.csproj", "{460DAC5E-57C0-4CC1-AF9A-45C3EC9A2BE5}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -87,6 +89,10 @@ Global
 		{1508AD42-80D0-4162-A653-A3EA903C4DAE}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1508AD42-80D0-4162-A653-A3EA903C4DAE}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1508AD42-80D0-4162-A653-A3EA903C4DAE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{460DAC5E-57C0-4CC1-AF9A-45C3EC9A2BE5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{460DAC5E-57C0-4CC1-AF9A-45C3EC9A2BE5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{460DAC5E-57C0-4CC1-AF9A-45C3EC9A2BE5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{460DAC5E-57C0-4CC1-AF9A-45C3EC9A2BE5}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
