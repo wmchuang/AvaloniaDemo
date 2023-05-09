@@ -31,6 +31,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ImageConver", "ImageConver\
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CacheDemo", "CacheDemo\CacheDemo.csproj", "{460DAC5E-57C0-4CC1-AF9A-45C3EC9A2BE5}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LoggerDemo", "LoggerDemo\LoggerDemo.csproj", "{A188666A-5F31-4032-BEDA-6BDB4B89F2C8}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -93,6 +95,10 @@ Global
 		{460DAC5E-57C0-4CC1-AF9A-45C3EC9A2BE5}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{460DAC5E-57C0-4CC1-AF9A-45C3EC9A2BE5}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{460DAC5E-57C0-4CC1-AF9A-45C3EC9A2BE5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A188666A-5F31-4032-BEDA-6BDB4B89F2C8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A188666A-5F31-4032-BEDA-6BDB4B89F2C8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A188666A-5F31-4032-BEDA-6BDB4B89F2C8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A188666A-5F31-4032-BEDA-6BDB4B89F2C8}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
