@@ -33,6 +33,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CacheDemo", "CacheDemo\Cach
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LoggerDemo", "LoggerDemo\LoggerDemo.csproj", "{A188666A-5F31-4032-BEDA-6BDB4B89F2C8}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BehaviorsDemo", "BehaviorsDemo\BehaviorsDemo.csproj", "{1A3D5DD5-1313-42D7-9017-5932790A4104}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -99,6 +101,10 @@ Global
 		{A188666A-5F31-4032-BEDA-6BDB4B89F2C8}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A188666A-5F31-4032-BEDA-6BDB4B89F2C8}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A188666A-5F31-4032-BEDA-6BDB4B89F2C8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1A3D5DD5-1313-42D7-9017-5932790A4104}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1A3D5DD5-1313-42D7-9017-5932790A4104}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1A3D5DD5-1313-42D7-9017-5932790A4104}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1A3D5DD5-1313-42D7-9017-5932790A4104}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

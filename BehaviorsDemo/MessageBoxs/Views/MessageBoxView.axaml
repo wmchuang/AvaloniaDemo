@@ -1,0 +1,39 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        x:Class="YlBaseUI.MessageBoxView"
+        d:DesignWidth="328"
+        d:DesignHeight="210"
+        Width="328" Height="210"
+        MaxWidth="328" MaxHeight="210"
+        ExtendClientAreaToDecorationsHint="True"
+        Background="{DynamicResource YlBaseBackground}">
+    <Grid MaxWidth="328" MaxHeight="210" RowDefinitions="37,*,64">
+        <Grid Grid.Row="0" ColumnDefinitions="*,40">
+            <TextBlock Name="Title"
+                       Text="温馨提示"
+                       Grid.ColumnSpan="2"
+                       VerticalAlignment="Bottom"
+                       Classes="h2" />
+        </Grid>
+        <Border Grid.Row="1" VerticalAlignment="Center" Margin="15 0">
+            <TextBlock Name="Message" Text="确定要执行当前的操作吗？"
+                       TextAlignment="Center"
+                       TextWrapping="Wrap"
+                       Classes="h3" />
+        </Border>
+
+        <Grid Grid.Row="2" VerticalAlignment="Top" ColumnDefinitions="*,*" Margin="30,0">
+            <Grid.Styles>
+                <Style Selector="Button">
+                    <Setter Property="Height" Value="38" />
+                    <Setter Property="Width" Value="120" />
+                    <Setter Property="HorizontalAlignment" Value="Center" />
+                </Style>
+            </Grid.Styles>
+            <Button Content="取消" Name="btnCancel" />
+
+            <Button Grid.Column="1" Classes="Primary" Content="确定" Name="btnOk" />
+        </Grid>
+    </Grid>
+</Window>
