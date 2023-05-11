@@ -8,13 +8,11 @@ public static class TaskClient
 {
     public static Task Run(Func<Task> function, Action? catchDo = null)
     {
-        // return Task.Run(() =>
-        // {
-        var task = function();
-        task.Execute(catchDo);
-
-        return task;
-        // });
+        return Task.Run(() =>
+        {
+            var task = function();
+            task.Execute(catchDo);
+        });
     }
 
     public static Task Run(Action action)
