@@ -5,10 +5,10 @@
              xmlns:uc="clr-namespace:PropertyDemo.UserControls"
 			 mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
              x:Class="PropertyDemo.UserControls.AttachView"
-			 uc:AttachView.Value="10"
-			 Name="uc">
+			 uc:AttachedProperties.Value="10"
+			 x:Name="Uc">
 	<StackPanel Orientation="Vertical">
-		<TextBlock Text="{Binding #uc.(uc:AttachView.Value)}" Width="50" />
-		<Slider  Width="150" Value="{Binding #uc.(uc:AttachView.Value)}"/>
+		<TextBlock Text="{Binding #Uc.(uc:AttachedProperties.Value)}" Width="50" />
+		<Slider  Width="150" Value="{Binding #Uc.(uc:AttachedProperties.Value)}"/>
 	</StackPanel>
 </UserControl>

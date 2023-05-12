@@ -37,6 +37,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BehaviorsDemo", "BehaviorsD
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExtendClientDemo", "ExtendClientDemo\ExtendClientDemo.csproj", "{2EE81979-0DC0-4B68-8703-7945BDE675E1}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HtmlRenderDemo", "HtmlRenderDemo\HtmlRenderDemo.csproj", "{52236F9E-4EAE-4CAD-878B-73CD661E4650}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -111,6 +113,10 @@ Global
 		{2EE81979-0DC0-4B68-8703-7945BDE675E1}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2EE81979-0DC0-4B68-8703-7945BDE675E1}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2EE81979-0DC0-4B68-8703-7945BDE675E1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{52236F9E-4EAE-4CAD-878B-73CD661E4650}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{52236F9E-4EAE-4CAD-878B-73CD661E4650}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{52236F9E-4EAE-4CAD-878B-73CD661E4650}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{52236F9E-4EAE-4CAD-878B-73CD661E4650}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

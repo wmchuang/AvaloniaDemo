@@ -15,7 +15,7 @@ public class MainWindowViewModel : ViewModelBase
     {
         List = new ObservableCollection<string>();
         
-        List.AddRange(Enumerable.Range(1,10).Select(x => $"Hello {x}"));
+        List.AddRange(Enumerable.Range(1,20).Select(x => $"Hello {x}"));
     }
 
     public void Load()
