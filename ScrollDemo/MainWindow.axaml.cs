@@ -7,5 +7,8 @@ public partial class MainWindow : Window
     public MainWindow()
     {
         InitializeComponent();
+        
+        // this.TransparencyLevelHint = WindowTransparencyLevel.Transparent;
+        // ExtendClientAreaToDecorationsHint = true;
     }
 }
