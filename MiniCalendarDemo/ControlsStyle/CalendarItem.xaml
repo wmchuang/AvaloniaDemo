@@ -1,0 +1,131 @@
+<!--
+// (c) Copyright Microsoft Corporation.
+// This source is subject to the Microsoft Public License (Ms-PL).
+// Please see https://go.microsoft.com/fwlink/?LinkID=131993 for details.
+// All other rights reserved.
+-->
+<ResourceDictionary xmlns="https://github.com/avaloniaui"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:uc="clr-namespace:MiniCalendarDemo.Controls">
+
+    <ControlTheme x:Key="FluentCalendarButton" TargetType="Button">
+        <Setter Property="HorizontalAlignment" Value="Stretch" />
+        <Setter Property="VerticalAlignment" Value="Stretch" />
+        <Setter Property="VerticalContentAlignment" Value="Center" />
+        <Setter Property="FontSize" Value="15" />
+        <Setter Property="Background" Value="{DynamicResource CalendarViewNavigationButtonBackground}" />
+        <Setter Property="Template">
+            <ControlTemplate>
+                <!-- HCA was changed here to ensure nav arrows display correctly -->
+                <ContentPresenter Name="Text" Background="{TemplateBinding Background}"
+                                  BorderBrush="{DynamicResource CalendarViewNavigationButtonBorderBrush}"
+                                  BorderThickness="{TemplateBinding BorderThickness}"
+                                  Content="{TemplateBinding Content}"
+                                  Margin="{TemplateBinding Padding}"
+                                  HorizontalContentAlignment="Stretch"
+                                  VerticalContentAlignment="{TemplateBinding VerticalContentAlignment}" />
+            </ControlTemplate>
+        </Setter>
+
+        <Style Selector="^:pointerover /template/ ContentPresenter#Text">
+            <Setter Property="BorderBrush" Value="{DynamicResource CalendarViewNavigationButtonBorderBrushPointerOver}" />
+            <Setter Property="Foreground" Value="{DynamicResource CalendarViewNavigationButtonForegroundPointerOver}" />
+        </Style>
+        <Style Selector="^:pressed /template/ ContentPresenter#Text">
+            <Setter Property="Foreground" Value="{DynamicResource CalendarViewNavigationButtonForegroundPressed}" />
+        </Style>
+        <Style Selector="^:disabled /template/ ContentPresenter">
+            <Setter Property="Foreground" Value="{DynamicResource CalendarViewWeekDayForegroundDisabled}" />
+        </Style>
+    </ControlTheme>
+
+    <ControlTheme x:Key="{x:Type uc:MiniCalendarItem}" TargetType="uc:MiniCalendarItem">
+        <!-- <Setter Property="CornerRadius" Value="{DynamicResource ControlCornerRadius}" /> -->
+        <!-- <Setter Property="HorizontalAlignment" Value="Stretch" /> -->
+        <!-- <Setter Property="VerticalAlignment" Value="Stretch" /> -->
+        <Setter Property="DayTitleTemplate">
+            <Template x:DataType="x:String">
+                <Border Background="#ff705b">
+                    <TextBlock Text="{Binding}"
+                               HorizontalAlignment="Center"
+                               VerticalAlignment="Center"
+                               Foreground="White"
+                               FontSize="14" />
+                </Border>
+            </Template>
+        </Setter>
+
+        <Setter Property="Template">
+            <ControlTemplate>
+                <!-- <Border Background="Green" Width="{TemplateBinding Width}"></Border> -->
+                <Border BorderThickness="{TemplateBinding BorderThickness}"
+                        Background="{TemplateBinding Background}"
+                        BorderBrush="{TemplateBinding BorderBrush}"
+                        CornerRadius="{TemplateBinding CornerRadius}">
+                    <Grid  VerticalAlignment="Stretch" HorizontalAlignment="Stretch" RowDefinitions="40,*"
+                           MinWidth="294">
+                
+                        <StackPanel Orientation="Horizontal" HorizontalAlignment="Right">
+                            <Button Name="PART_PreviousButton"
+                                    Theme="{StaticResource FluentCalendarButton}"
+                                    Foreground="{TemplateBinding Foreground}"
+                                    Padding="1"
+                                    Width="30"
+                                    HorizontalContentAlignment="Left">
+                                <Button.Background>
+                                    <ImageBrush Source="avares://MiniCalendarDemo/Assets/left.png"></ImageBrush>
+                                </Button.Background>
+                            </Button>
+                            <Button Name="PART_HeaderButton"
+                                    Theme="{StaticResource FluentCalendarButton}"
+                                    Foreground="{TemplateBinding Foreground}"
+                                    Content="2022年5月"
+                                    Padding="12,0,0,0" />
+                
+                            <Button Name="PART_NextButton"
+                                    Theme="{StaticResource FluentCalendarButton}"
+                                    Foreground="{TemplateBinding Foreground}"
+                                    Padding="1"
+                                    Width="30"
+                                    HorizontalContentAlignment="Left">
+                                <Button.Background>
+                                    <ImageBrush Source="avares://MiniCalendarDemo/Assets/right.png"></ImageBrush>
+                                </Button.Background>
+                            </Button>
+                        </StackPanel>
+                        <!-- Border below is used only for MonthView but it can't be moved inside of Grid because CalendarItem expects it to be empty and it will cause side-effects -->
+                         <!-- <Border Name="BackgroundLayer" Background="{TemplateBinding BorderBrush}" Margin="0,38,0,0" -->
+                         <!--         IsVisible="{Binding #PART_MonthView.IsVisible}" Grid.Row="1" /> -->
+                        
+                         <Grid Name="PART_MonthView" Grid.Row="1" IsVisible="False" MinHeight="240" 
+                               Width="{TemplateBinding Width}" >
+                             <Grid.RowDefinitions>
+                                 <!--This should always be the week day names??-->
+                                 <RowDefinition Height="38" />
+                                 <RowDefinition Height="Auto" />
+                                 <RowDefinition Height="Auto" />
+                                 <RowDefinition Height="Auto" />
+                             </Grid.RowDefinitions>
+                             <Grid.ColumnDefinitions>
+                                 <ColumnDefinition Width="*" />
+                                 <ColumnDefinition Width="*" />
+                                 <ColumnDefinition Width="*" />
+                                 <ColumnDefinition Width="*" />
+                                 <ColumnDefinition Width="*" />
+                                 <ColumnDefinition Width="*" />
+                                 <ColumnDefinition Width="*" />
+                                 <ColumnDefinition Width="*" />
+                                 <ColumnDefinition Width="*" />
+                                 <ColumnDefinition Width="*" />
+                                 <ColumnDefinition Width="*" />
+                                 <ColumnDefinition Width="*" />
+                                 <ColumnDefinition Width="*" />
+                                 <ColumnDefinition Width="*" />
+                             </Grid.ColumnDefinitions>
+                         </Grid>
+                    </Grid>
+                </Border>
+            </ControlTemplate>
+        </Setter>
+    </ControlTheme>
+</ResourceDictionary>

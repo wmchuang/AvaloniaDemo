@@ -1,0 +1,27 @@
+<Application xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             x:Class="CalendarDemo.App">
+
+    <Application.Styles>
+        <FluentTheme />
+
+
+    </Application.Styles>
+
+
+    <Application.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+    
+                <MergeResourceInclude Source="avares://CalendarDemo/Controls/Calendar.xaml" />
+                <MergeResourceInclude Source="avares://CalendarDemo/Controls/CalendarButton.xaml" />
+                <MergeResourceInclude Source="avares://CalendarDemo/Controls/CalendarDatePicker.xaml" />
+                <MergeResourceInclude Source="avares://CalendarDemo/Controls/CalendarDayButton.xaml" />
+                <MergeResourceInclude Source="avares://CalendarDemo/Controls/CalendarItem.xaml" />
+    
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </Application.Resources>
+
+
+</Application>

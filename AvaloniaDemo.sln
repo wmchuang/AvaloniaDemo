@@ -43,6 +43,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IocDemo", "IocDemo\IocDemo.
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UserControlDemo1", "UserControlDemo1\UserControlDemo1.csproj", "{1D466E52-A428-49AC-9A11-984883FB3427}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CalendarDemo", "CalendarDemo\CalendarDemo.csproj", "{C89B4A7E-E360-4A21-B9A3-2350F68F48C9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MiniCalendarDemo", "MiniCalendarDemo\MiniCalendarDemo.csproj", "{9ECD7195-7DB2-4723-8FCD-DF1CDD743CCC}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -129,6 +133,14 @@ Global
 		{1D466E52-A428-49AC-9A11-984883FB3427}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1D466E52-A428-49AC-9A11-984883FB3427}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1D466E52-A428-49AC-9A11-984883FB3427}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C89B4A7E-E360-4A21-B9A3-2350F68F48C9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C89B4A7E-E360-4A21-B9A3-2350F68F48C9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C89B4A7E-E360-4A21-B9A3-2350F68F48C9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C89B4A7E-E360-4A21-B9A3-2350F68F48C9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9ECD7195-7DB2-4723-8FCD-DF1CDD743CCC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9ECD7195-7DB2-4723-8FCD-DF1CDD743CCC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9ECD7195-7DB2-4723-8FCD-DF1CDD743CCC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9ECD7195-7DB2-4723-8FCD-DF1CDD743CCC}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

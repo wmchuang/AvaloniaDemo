@@ -1,0 +1,16 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+        x:Class="MiniCalendarDemo.MainWindow"
+        Title="MiniCalendarDemo"
+        x:Name="Window"
+        xmlns:uc="clr-namespace:MiniCalendarDemo.Controls">
+    
+    <Grid RowDefinitions="*,*">
+        <uc:MiniCalendar Marks="17,19,20,21,22,30,21" MarkText="直播" Width="{Binding $parent.Width}" ></uc:MiniCalendar>
+
+        <!-- <Border Background="Red" Grid.Row="1"></Border> -->
+    </Grid>
+</Window>
