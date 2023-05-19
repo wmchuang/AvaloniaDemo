@@ -82,6 +82,12 @@
             <Style Selector="^:pressed /template/ Border#Border">
                 <Setter Property="BorderBrush" Value="{DynamicResource CalendarViewSelectedPressedBorderBrush}" />
             </Style>
+            <Style Selector="^ /template/ ContentControl#Content">
+                <Setter Property="Foreground" Value="#FF705B" />
+            </Style>
+            <Style Selector="^ /template/ TextBlock#Mask">
+                <Setter Property="Foreground" Value="#FF705B" />
+            </Style>
         </Style>
 
         <Style Selector="^:today">
@@ -95,9 +101,11 @@
             <Style Selector="^:pressed /template/ Border#Border">
                 <Setter Property="BorderBrush" Value="{DynamicResource SystemAccentColorDark2}" />
             </Style>
-            <Style Selector="^ ContentControl#Content">
-                <Setter Property="Foreground" Value="{DynamicResource CalendarViewTodayForeground}" />
-                <Setter Property="FontWeight" Value="SemiBold" />
+            <Style Selector="^ /template/ ContentControl#Content">
+                <Setter Property="Foreground" Value="#FF705B" />
+            </Style>
+            <Style Selector="^ /template/ TextBlock#Mask">
+                <Setter Property="Foreground" Value="#FF705B" />
             </Style>
         </Style>
 
@@ -105,10 +113,12 @@
         <Style Selector="^:inactive">
             <Style Selector="^ /template/ Border#Root">
                 <Setter Property="Background" Value="{DynamicResource CalendarViewOutOfScopeBackground}" />
+                <!-- <Setter Property="Background" Value="Red" /> -->
             </Style>
             <Style Selector="^ /template/ ContentControl#Content">
                 <!-- <Setter Property="Foreground" Value="{DynamicResource CalendarViewOutOfScopeForeground}" /> -->
-                <Setter Property="Foreground" Value="#8D90AA" />
+                <!-- <Setter Property="Foreground" Value="#8D90AA" /> -->
+                <Setter Property="Foreground" Value="#FF767676" />
             </Style>
         </Style>
         

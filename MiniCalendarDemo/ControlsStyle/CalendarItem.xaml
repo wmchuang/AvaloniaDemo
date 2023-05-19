@@ -70,23 +70,22 @@
                                     Theme="{StaticResource FluentCalendarButton}"
                                     Foreground="{TemplateBinding Foreground}"
                                     Padding="1"
-                                    Width="30"
+                                    Width="20"
                                     HorizontalContentAlignment="Left">
                                 <Button.Background>
                                     <ImageBrush Source="avares://MiniCalendarDemo/Assets/left.png"></ImageBrush>
                                 </Button.Background>
                             </Button>
-                            <Button Name="PART_HeaderButton"
-                                    Theme="{StaticResource FluentCalendarButton}"
-                                    Foreground="{TemplateBinding Foreground}"
-                                    Content="2022年5月"
-                                    Padding="12,0,0,0" />
+                            
+                            <TextBlock Name="PART_HeaderText" Text=""  Foreground="{TemplateBinding Foreground}"
+                                       HorizontalAlignment="Center"
+                                       VerticalAlignment="Center"></TextBlock>
                 
                             <Button Name="PART_NextButton"
                                     Theme="{StaticResource FluentCalendarButton}"
                                     Foreground="{TemplateBinding Foreground}"
                                     Padding="1"
-                                    Width="30"
+                                    Width="20"
                                     HorizontalContentAlignment="Left">
                                 <Button.Background>
                                     <ImageBrush Source="avares://MiniCalendarDemo/Assets/right.png"></ImageBrush>

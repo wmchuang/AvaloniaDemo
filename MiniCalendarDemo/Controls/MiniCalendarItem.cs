@@ -15,14 +15,14 @@ public class MiniCalendarItem : TemplatedControl
 {
     private const int NumberOfDaysPerWeek = 7;
 
-    private const string PART_ElementHeaderButton = "PART_HeaderButton";
+    private const string PART_ElementHeaderText = "PART_HeaderText";
     private const string PART_ElementPreviousButton = "PART_PreviousButton";
     private const string PART_ElementNextButton = "PART_NextButton";
     private const string PART_ElementMonthView = "PART_MonthView";
 
     internal Grid? MonthView { get; set; }
 
-    private Button? _headerButton;
+    private TextBlock? _headerTextBlock;
     private Button? _nextButton;
     private Button? _previousButton;
 
@@ -76,16 +76,16 @@ public class MiniCalendarItem : TemplatedControl
         }
     }
 
-    internal Button? HeaderButton
+    internal TextBlock? HeaderTextBlock
     {
-        get { return _headerButton; }
+        get { return _headerTextBlock; }
         private set
         {
-            _headerButton = value;
+            _headerTextBlock = value;
 
-            if (_headerButton != null)
+            if (_headerTextBlock != null)
             {
-                _headerButton.Focusable = false;
+                _headerTextBlock.Focusable = false;
             }
         }
     }
@@ -125,10 +125,8 @@ public class MiniCalendarItem : TemplatedControl
     /// </summary>
     protected override void OnApplyTemplate(TemplateAppliedEventArgs e)
     {
-        HeaderButton = e.NameScope.Find<Button>(PART_ElementHeaderButton);
-
+        HeaderTextBlock = e.NameScope.Find<TextBlock>(PART_ElementHeaderText);
         MonthView = e.NameScope.Find<Grid>(PART_ElementMonthView);
-
         PreviousButton = e.NameScope.Find<Button>(PART_ElementPreviousButton);
         NextButton = e.NameScope.Find<Button>(PART_ElementNextButton);
 
@@ -165,9 +163,6 @@ public class MiniCalendarItem : TemplatedControl
             }
 
             EventHandler<PointerPressedEventArgs> cellMouseLeftButtonDown = Cell_MouseLeftButtonDown;
-            // EventHandler<PointerReleasedEventArgs> cellMouseLeftButtonUp = Cell_MouseLeftButtonUp;
-            // EventHandler<PointerEventArgs> cellMouseEntered = Cell_MouseEntered;
-            // EventHandler<RoutedEventArgs> cellClick = Cell_Click;
 
             for (int i = 1; i < MiniCalendar.RowsPerMonth; i++)
             {
@@ -175,17 +170,10 @@ public class MiniCalendarItem : TemplatedControl
                 {
                     var cell = new MiniCalendarDayButton();
 
-                    // if (Owner != null)
-                    // {
-                    //     cell.Owner = Owner;
-                    // }
 
                     cell.SetValue(Grid.RowProperty, i);
                     cell.SetValue(Grid.ColumnProperty, j);
                     cell.CalendarDayButtonMouseDown += cellMouseLeftButtonDown;
-                    // cell.CalendarDayButtonMouseUp += cellMouseLeftButtonUp;
-                    // cell.PointerEntered += cellMouseEntered;
-                    // cell.Click += cellClick;
                     children.Add(cell);
                 }
             }
@@ -227,9 +215,7 @@ public class MiniCalendarItem : TemplatedControl
             _currentMonth = DateTime.Today;
         }
 
-        SetMonthModeHeaderButton();
-        // SetMonthModePreviousButton(_currentMonth);
-        // SetMonthModeNextButton(_currentMonth);
+        SetMonthModeHeaderText();
 
         if (MonthView != null)
         {
@@ -238,18 +224,18 @@ public class MiniCalendarItem : TemplatedControl
         }
     }
 
-    private void SetMonthModeHeaderButton()
+    private void SetMonthModeHeaderText()
     {
-        if (HeaderButton != null)
+        if (HeaderTextBlock != null)
         {
             if (Owner != null)
             {
-                HeaderButton.Content = Owner.DisplayDateInternal.ToString("yyyy年M月份");
-                HeaderButton.IsEnabled = true;
+                HeaderTextBlock.Text = Owner.DisplayDateInternal.ToString("yyyy年M月份");
+                HeaderTextBlock.IsEnabled = true;
             }
             else
             {
-                HeaderButton.Content = DateTime.Today.ToString("Y", DateTimeHelper.GetCurrentDateFormat());
+                HeaderTextBlock.Text = DateTime.Today.ToString("Y", DateTimeHelper.GetCurrentDateFormat());
             }
         }
     }
@@ -287,12 +273,6 @@ public class MiniCalendarItem : TemplatedControl
         {
             dateToAdd = firstDayOfMonth;
         }
-        //
-        // if (Owner != null && Owner.HoverEnd != null && Owner.HoverStart != null)
-        // {
-        //     Owner.HoverEndIndex = null;
-        //     Owner.HoverStartIndex = null;
-        // }
 
         int count = MiniCalendar.RowsPerMonth * MiniCalendar.ColumnsPerMonth;
 
@@ -300,23 +280,6 @@ public class MiniCalendarItem : TemplatedControl
         {
             MiniCalendarDayButton childButton = (MiniCalendarDayButton)MonthView!.Children[childIndex];
 
-            // childButton.Index = childIndex;
-            //
-            // // Update the indexes of hoverStart and hoverEnd
-            // if (Owner != null && Owner.HoverEnd != null && Owner.HoverStart != null)
-            // {
-            //     if (DateTimeHelper.CompareDays(dateToAdd, Owner.HoverEnd.Value) == 0)
-            //     {
-            //         Owner.HoverEndIndex = childIndex;
-            //     }
-            //
-            //     if (DateTimeHelper.CompareDays(dateToAdd, Owner.HoverStart.Value) == 0)
-            //     {
-            //         Owner.HoverStartIndex = childIndex;
-            //     }
-            // }
-
-            //childButton.Focusable = false;
 
             var content = dateToAdd.Day.ToString(DateTimeHelper.GetCurrentDateFormat());
             childButton.Content = content;
@@ -354,23 +317,13 @@ public class MiniCalendarItem : TemplatedControl
     {
         if (Owner != null)
         {
-            var marks = Owner.Marks?.Split(",").ToArray();
+            var marks = Owner.Marks?.Split(',').ToArray();
             childButton.MarkText = Owner.MarkText;
 
             childButton.IsMark = marks?.Any(x => x == content) ?? false;
             childButton.Opacity = 1;
 
-            // If the day is outside the DisplayDateStart/End boundary, do
-
-            // SET IF THE DAY IS SELECTABLE OR NOT
-            // if (Owner.BlackoutDates.Contains(dateToAdd))
-            // {
-            //     childButton.IsBlackout = true;
-            // }
-            // else
-            // {
-            //     childButton.IsBlackout = false;
-            // }
+          
             childButton.IsEnabled = true;
 
             // SET IF THE DAY IS INACTIVE OR NOT: set if the day is a
@@ -383,13 +336,6 @@ public class MiniCalendarItem : TemplatedControl
             // SET IF THE DAY IS SELECTED OR NOT
             childButton.IsSelected = false;
             childButton.IsSelected |= (DateTimeHelper.CompareDays(dateToAdd, Owner.SelectedDate ?? DateTime.MinValue) == 0);
-            // foreach (DateTime item in Owner.SelectedDates)
-            // {
-            //     // Since we should be comparing the Date values not
-            //     // DateTime values, we can't use
-            //     // Owner.SelectedDates.Contains(dateToAdd) directly
-            //     childButton.IsSelected |= (DateTimeHelper.CompareDays(dateToAdd, item) == 0);
-            // }
         }
     }
 

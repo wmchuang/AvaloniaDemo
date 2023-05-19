@@ -15,18 +15,16 @@
   </Design.PreviewWith>
 
   <ControlTheme x:Key="{x:Type uc:MiniCalendar}" TargetType="uc:MiniCalendar">
-    <!-- <Setter Property="Foreground" Value="{DynamicResource CalendarViewForeground}" /> -->
-    <!-- <Setter Property="Background" Value="{DynamicResource CalendarViewBackground}" /> -->
-    <!-- <Setter Property="BorderBrush" Value="{DynamicResource CalendarViewBorderBrush}" /> -->
-    <!-- <Setter Property="BorderThickness" Value="1" /> -->
-    <!-- <Setter Property="HorizontalAlignment" Value="Stretch" /> -->
-    <!-- <Setter Property="VerticalAlignment" Value="Stretch" /> -->
+    <Setter Property="Foreground" Value="{DynamicResource CalendarViewForeground}" />
+    <Setter Property="Background" Value="{DynamicResource CalendarViewBackground}" />
+    <Setter Property="BorderBrush" Value="{DynamicResource CalendarViewBorderBrush}" />
+    <Setter Property="BorderThickness" Value="1" />
+    <Setter Property="HorizontalAlignment" Value="Stretch" />
+    <Setter Property="VerticalAlignment" Value="Stretch" />
     <Setter Property="Template">
       <ControlTemplate>
         <StackPanel
-            Name="PART_Root"
-            HorizontalAlignment="Stretch"
-            VerticalAlignment="Stretch">
+            Name="PART_Root">
           <uc:MiniCalendarItem
               Name="PART_CalendarItem"
               Width="{TemplateBinding Width}"
