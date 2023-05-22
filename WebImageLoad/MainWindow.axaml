@@ -4,9 +4,15 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
         x:Class="WebImageLoad.MainWindow"
-        xmlns:asyncImageLoader="clr-namespace:AsyncImageLoader;assembly=AsyncImageLoader.Avalonia"
+        xmlns:asyncImageLoader="clr-namespace:AsyncImageLoader"
         Title="WebImageLoad">
- <Grid>
-     <Image asyncImageLoader:ImageLoader.Source="https://gss0.baidu.com/-vo3dSag_xI4khGko9WTAnF6hhy/zhidao/pic/item/3b292df5e0fe992551f8fbb131a85edf8cb1715f.jpg"></Image>
- </Grid>
+ <StackPanel Orientation="Horizontal">
+     <Image Margin="50 0" Width="100" Height="100" asyncImageLoader:ImageLoader.Source="https://gss0.baidu.com/-vo3dSag_xI4khGko9WTAnF6hhy/zhidao/pic/item/3b292df5e0fe992551f8fbb131a85edf8cb1715f.jpg"></Image>
+
+     <Border Width="100" Height="100">
+         <Border.Background>
+             <ImageBrush asyncImageLoader:ImageBrushLoader.Source="https://gss0.baidu.com/-vo3dSag_xI4khGko9WTAnF6hhy/zhidao/pic/item/3b292df5e0fe992551f8fbb131a85edf8cb1715f.jpg"></ImageBrush>
+         </Border.Background>
+     </Border>
+ </StackPanel>
 </Window>

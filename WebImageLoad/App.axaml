@@ -3,6 +3,6 @@
              x:Class="WebImageLoad.App">
 
     <Application.Styles>
-        <FluentTheme Mode="Light"/>
+        <FluentTheme/>
     </Application.Styles>
 </Application>
