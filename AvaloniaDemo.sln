@@ -47,6 +47,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CalendarDemo", "CalendarDem
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MiniCalendarDemo", "MiniCalendarDemo\MiniCalendarDemo.csproj", "{9ECD7195-7DB2-4723-8FCD-DF1CDD743CCC}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TransitionsDemo", "TransitionsDemo\TransitionsDemo.csproj", "{0FB03EC3-D4AC-4368-A8B5-7A2F84D0C812}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -141,6 +143,10 @@ Global
 		{9ECD7195-7DB2-4723-8FCD-DF1CDD743CCC}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9ECD7195-7DB2-4723-8FCD-DF1CDD743CCC}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9ECD7195-7DB2-4723-8FCD-DF1CDD743CCC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0FB03EC3-D4AC-4368-A8B5-7A2F84D0C812}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0FB03EC3-D4AC-4368-A8B5-7A2F84D0C812}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0FB03EC3-D4AC-4368-A8B5-7A2F84D0C812}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0FB03EC3-D4AC-4368-A8B5-7A2F84D0C812}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
