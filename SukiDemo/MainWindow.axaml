@@ -1,0 +1,16 @@
+<Window x:Class="SukiDemo.MainWindow"
+        xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:paz="using:Avalonia.Controls.PanAndZoom"
+        WindowStartupLocation="CenterScreen" UseLayoutRounding="True"
+        Title="PanAndZoom" Height="640" Width="640">
+    <paz:ZoomBorder Name="ZoomBorder" Stretch="None" ZoomSpeed="1.2"
+                    Background="SlateBlue" ClipToBounds="True" Focusable="True"
+                    VerticalAlignment="Stretch" HorizontalAlignment="Stretch">
+       <ComboBox>
+           <ComboBoxItem> Item1</ComboBoxItem>
+           <ComboBoxItem> Item2</ComboBoxItem>
+           <ComboBoxItem> Item3</ComboBoxItem>
+       </ComboBox>
+    </paz:ZoomBorder>  
+</Window>
