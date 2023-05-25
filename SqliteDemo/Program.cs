@@ -12,6 +12,7 @@ var sqliteBuilder = new SqliteConnectionStringBuilder(connectionStr)
 
 string sql = "CREATE TABLE FirstTable(ID varchar(36),UserName varchar(30),PassWord varchar(30))";
 
+
 using var connection = new SqliteConnection(sqliteBuilder);
 connection.Open();
 using var command = connection.CreateCommand();
