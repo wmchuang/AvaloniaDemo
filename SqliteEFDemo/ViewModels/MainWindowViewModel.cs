@@ -11,7 +11,7 @@ namespace SqliteEFDemo.ViewModels;
 
 public class MainWindowViewModel : ViewModelBase
 {
-    private ObservableCollection<TodoEntity> _todoEntities = new ObservableCollection<TodoEntity>();
+    private ObservableCollection<TodoEntity> _todoEntities = new();
     public string Greeting => "Welcome to Avalonia!";
 
     public ObservableCollection<TodoEntity> TodoEntities
@@ -38,5 +38,14 @@ public class MainWindowViewModel : ViewModelBase
         var m = db.TodoEntities.ToList();
         TodoEntities.Clear();
         TodoEntities.AddRange(m);
+    }
+    
+    public void Clear()
+    {
+        TodoEntities.Clear();
+        using var db = new DatabaseContextFactory().CreateDbContext();
+        var m = db.TodoEntities.ToList();
+        db.TodoEntities.RemoveRange(m);
+        db.SaveChanges();
     }
 }

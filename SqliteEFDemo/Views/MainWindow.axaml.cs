@@ -12,21 +12,28 @@ public partial class MainWindow : Window
         InitializeComponent();
         vm = new MainWindowViewModel();
         this.DataContext = vm;
+        vm.Refresh();
     }
 
     private void Add_OnClick(object? sender, RoutedEventArgs e)
     {
         var thingTb = this.FindControl<TextBox>("Thing");
 
-        var s = thingTb?.Text.Trim();
+        var s = thingTb?.Text?.Trim();
         if (!string.IsNullOrEmpty(s))
         {
             vm.Add(s);
+            vm.Refresh();
         }
     }
 
     private void Refresh_OnClick(object? sender, RoutedEventArgs e)
     {
         vm.Refresh();
+    }
+
+    private void Clear_OnClick(object? sender, RoutedEventArgs e)
+    {
+        vm.Clear();
     }
 }

@@ -22,14 +22,15 @@ public partial class App : Application
             {
                 
             };
+
+            desktop.Startup += OnDesktopOnStartup;
         }
 
         base.OnFrameworkInitializationCompleted();
     }
 
-    public override void RegisterServices()
+    private void OnDesktopOnStartup(object sender, ControlledApplicationLifetimeStartupEventArgs args)
     {
-        base.RegisterServices();
         using var db = new DatabaseContextFactory().CreateDbContext();
         db.Database.EnsureCreated();
     }
