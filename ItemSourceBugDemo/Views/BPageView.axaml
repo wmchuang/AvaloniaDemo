@@ -8,7 +8,7 @@
         <StackPanel>
             <ItemsControl ItemsSource="{Binding ListData}">
                 <ItemsControl.ItemTemplate>
-                    <DataTemplate>
+                    <DataTemplate> 
                         <Border Margin="30">
                             <TextBlock Text="{Binding Name}"></TextBlock>
                         </Border> 
