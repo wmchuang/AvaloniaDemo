@@ -1,0 +1,37 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:vm="using:SqliteEFDemo.ViewModels"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+        x:Class="SqliteEFDemo.Views.MainWindow"
+        x:DataType="vm:MainWindowViewModel"
+        Icon="/Assets/avalonia-logo.ico"
+        Title="SqliteEFDemo">
+
+    <Design.DataContext>
+        <!-- This only sets the DataContext for the previewer in an IDE,
+             to set the actual DataContext for runtime, set the DataContext property in code (look at App.axaml.cs) -->
+        <vm:MainWindowViewModel/>
+    </Design.DataContext>
+
+
+    <Grid RowDefinitions="Auto,*">
+        <StackPanel Orientation="Horizontal" Spacing="50" Margin="20 0">
+            <TextBox Name="Thing" Width="200" />
+            <Button Content="Add" x:Name="Add" Click="Add_OnClick"/>
+            <Button Content="Refresh" x:Name="Refresh" Click="Refresh_OnClick"/>
+        </StackPanel>
+        
+        <StackPanel Orientation="Vertical" Grid.Row="1">
+            <ItemsControl Items="{Binding TodoEntities}">
+                <ItemsControl.ItemTemplate>
+                    <DataTemplate>
+                        <TextBlock Text="{Binding Thing}" Margin="20 10"/>
+                    </DataTemplate>
+                </ItemsControl.ItemTemplate>
+            </ItemsControl>
+        </StackPanel>
+    </Grid>
+    
+</Window>
