@@ -40,4 +40,14 @@
     <!-- <ListBox Items="{Binding People}" /> -->
     
     <ItemsControl Items="{Binding People}" ItemTemplate="{DynamicResource Template}" />
+    
+    <!-- <ItemsControl Items="{Binding TabViewModel.TabModels}" -->
+    <!--               ItemTemplate="{DynamicResource TabViewModelTemplate}" -->
+    <!--               Margin="28 0 0 0"> -->
+    <!--     <ItemsControl.ItemsPanel> -->
+    <!--         <ItemsPanelTemplate> -->
+    <!--             <VirtualizingStackPanel Orientation="Horizontal" /> -->
+    <!--         </ItemsPanelTemplate> -->
+    <!--     </ItemsControl.ItemsPanel> -->
+    <!-- </ItemsControl> -->
 </Window>
