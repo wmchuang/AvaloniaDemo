@@ -27,10 +27,10 @@
         </DataTemplate>
     </Window.Resources>
     
-    <!-- <models:People   />  -->
+    <models:People   FirstName="wang" LastName="chuang"/>
     
-    <ContentControl Content="{Binding People}"
-                    ContentTemplate="{DynamicResource Template}" />
+    <!-- <ContentControl Content="{Binding People}" -->
+    <!--                 ContentTemplate="{DynamicResource Template}" /> -->
     
 
 </Window>
