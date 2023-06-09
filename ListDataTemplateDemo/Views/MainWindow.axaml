@@ -13,34 +13,48 @@
     <Design.DataContext>
         <!-- This only sets the DataContext for the previewer in an IDE,
              to set the actual DataContext for runtime, set the DataContext property in code (look at App.axaml.cs) -->
-        <vm:MainWindowViewModel/>
+        <vm:MainWindowViewModel />
     </Design.DataContext>
-    
+
     <Window.Resources>
         <!--  Add a DataTemplate for any Person  -->
         <!--  We add this to the Resources section, so we can access it via it's Key explicitly.  -->
-        <DataTemplate  x:Key="Template" DataType="models:People">
-            <Grid ColumnDefinitions="Auto, *" RowDefinitions="Auto, Auto, Auto, Auto">
-                <TextBlock Grid.Row="0" Text="First Name: " />
-                <TextBlock Grid.Row="0"
-                           Grid.Column="1"
-                           Text="{Binding FirstName}" />
+        <!-- <DataTemplate  x:Key="Template" DataType="models:People"> -->
+        <!--     <Grid ColumnDefinitions="Auto, *" RowDefinitions="Auto, Auto, Auto, Auto"> -->
+        <!--         <TextBlock Grid.Row="0" Text="First Name: " /> -->
+        <!--         <TextBlock Grid.Row="0" -->
+        <!--                    Grid.Column="1" -->
+        <!--                    Text="{Binding FirstName}" /> -->
+        <!-- -->
+        <!--         <TextBlock Grid.Row="1" Text="Last Name: " /> -->
+        <!--         <TextBlock Grid.Row="1" -->
+        <!--                    Grid.Column="1" -->
+        <!--                    Text="{Binding LastName}" /> -->
+        <!-- -->
+        <!--     </Grid> -->
+        <!-- </DataTemplate> -->
 
-                <TextBlock Grid.Row="1" Text="Last Name: " />
-                <TextBlock Grid.Row="1"
-                           Grid.Column="1"
-                           Text="{Binding LastName}" />
-
-            </Grid>
+        <DataTemplate x:Key="DataTemplate" DataType="models:People">
+            <ItemsControl ItemsSource="{Binding Dogs}" Margin="28 0 0 0">
+                <ItemsControl.ItemsPanel>
+                    <ItemsPanelTemplate>
+                        <VirtualizingStackPanel Orientation="Horizontal" />
+                    </ItemsPanelTemplate>
+                </ItemsControl.ItemsPanel>
+                <ItemsControl.ItemTemplate>
+                    <DataTemplate>
+                        <TextBlock Text="{Binding Name}" />
+                    </DataTemplate>
+                </ItemsControl.ItemTemplate>
+            </ItemsControl>
         </DataTemplate>
     </Window.Resources>
-    
-    
+
 
     <!-- <ListBox Items="{Binding People}" /> -->
-    
-    <ItemsControl Items="{Binding People}" ItemTemplate="{DynamicResource Template}" />
-    
+
+    <!-- <ItemsControl Items="{Binding People}" ItemTemplate="{DynamicResource Template}" /> -->
+
     <!-- <ItemsControl Items="{Binding TabViewModel.TabModels}" -->
     <!--               ItemTemplate="{DynamicResource TabViewModelTemplate}" -->
     <!--               Margin="28 0 0 0"> -->
@@ -50,4 +64,10 @@
     <!--         </ItemsPanelTemplate> -->
     <!--     </ItemsControl.ItemsPanel> -->
     <!-- </ItemsControl> -->
+
+    <Grid ColumnDefinitions="Auto,*">
+        <ContentControl Content="{Binding Data}"
+                        ContentTemplate="{DynamicResource DataTemplate}" />
+    </Grid>
+
 </Window>

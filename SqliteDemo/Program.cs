@@ -3,7 +3,7 @@
 using Microsoft.Data.Sqlite;
 
 var filePath = AppDomain.CurrentDomain.BaseDirectory;
-var connectionStr =  $"Data Source=demo.db";
+var connectionStr =  $"Data Source=demo.xml";
 var sqliteBuilder = new SqliteConnectionStringBuilder(connectionStr)
 {
     Mode = SqliteOpenMode.ReadWriteCreate,

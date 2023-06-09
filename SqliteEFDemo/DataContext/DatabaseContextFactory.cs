@@ -10,7 +10,7 @@ public class DatabaseContextFactory
 {
     public DatabaseContext CreateDbContext(string[] args)
     {
-        var m = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "todo.db");
+        var m = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "todo.xml");
         var options = new DbContextOptionsBuilder<DatabaseContext>();
 
         //要加密 需要引入包 SQLitePCLRaw.bundle_e_sqlcipher
