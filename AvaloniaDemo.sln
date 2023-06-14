@@ -55,6 +55,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ItemSourceBugDemo", "ItemSo
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProgressBarDemo", "ProgressBarDemo\ProgressBarDemo.csproj", "{0D60B045-7181-4445-8250-AC3B2CF194BF}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ToolTipDemo", "ToolTipDemo\ToolTipDemo.csproj", "{9340B0FC-02EE-4C56-8794-94485B23451F}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -165,6 +167,10 @@ Global
 		{0D60B045-7181-4445-8250-AC3B2CF194BF}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0D60B045-7181-4445-8250-AC3B2CF194BF}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0D60B045-7181-4445-8250-AC3B2CF194BF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9340B0FC-02EE-4C56-8794-94485B23451F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9340B0FC-02EE-4C56-8794-94485B23451F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9340B0FC-02EE-4C56-8794-94485B23451F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9340B0FC-02EE-4C56-8794-94485B23451F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

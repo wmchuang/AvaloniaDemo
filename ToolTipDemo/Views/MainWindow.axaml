@@ -1,0 +1,52 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:vm="using:ToolTipDemo.ViewModels"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+        x:Class="ToolTipDemo.Views.MainWindow"
+        x:DataType="vm:MainWindowViewModel"
+        Icon="/Assets/avalonia-logo.ico"
+        Title="ToolTipDemo">
+
+    <Design.DataContext>
+        <!-- This only sets the DataContext for the previewer in an IDE,
+             to set the actual DataContext for runtime, set the DataContext property in code (look at App.axaml.cs) -->
+        <vm:MainWindowViewModel/>
+    </Design.DataContext>
+<Window.Styles>
+    <Style Selector="ToolTip">
+        <Setter Property="Foreground" Value="White" />
+        <Setter Property="Placement"  Value="Left" />
+        <Setter Property="MaxWidth" Value="250" />
+        <Setter Property="HorizontalOffset" Value="110" />
+        <Setter Property="VerticalOffset" Value="20" />
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type ToolTip}">
+                    <Grid Margin="5">
+                        <Polygon HorizontalAlignment="Right"
+                                 VerticalAlignment="Top"
+                                 Fill="#000000"
+                                 Opacity="0.6"
+                                 Points="0,6 6,0 12,6" 
+                                 Margin="0 0 50 0"/>
+                        
+                        <Border x:Name="grid"
+                                Margin="0,6,0,0"
+                                Padding="10,0,10,0"
+                                Background="#000000"
+                                Opacity="0.6"
+                                CornerRadius="6">
+                            <TextBlock Text="{TemplateBinding Content}" TextWrapping="Wrap" FontSize="12"  Margin="12" LineHeight="10"/>
+                        </Border>
+                    </Grid>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+</Window.Styles>
+    <TextBlock Text="{Binding Greeting}" HorizontalAlignment="Center" VerticalAlignment="Center"
+          ToolTip.Tip="哈哈哈哈"/>
+
+</Window>
