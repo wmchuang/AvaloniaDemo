@@ -16,7 +16,7 @@
         </Border.Styles>
         <Border.Transitions>
             <Transitions>
-                <TransformOperationsTransition Property="RenderTransform" Duration="0:0:1"/>
+                <TransformOperationsTransition Property="RenderTransform" Duration="0:0:1" Easing=""/>
             </Transitions>
         </Border.Transitions>
     </Border>
