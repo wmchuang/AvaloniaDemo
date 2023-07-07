@@ -5,19 +5,40 @@
         mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
         x:Class="TransitionsDemo.MainWindow"
         Title="TransitionsDemo">
-    <Border Width="100" Height="100" Background="Red">
-        <Border.Styles>
-            <Style Selector="Border">
-                <Setter Property="RenderTransform" Value="scaleY(1)"/>
-            </Style>
-            <Style Selector="Border:pointerover">
-                <Setter Property="RenderTransform" Value="scaleY(0.75)"/>
-            </Style>
-        </Border.Styles>
-        <Border.Transitions>
-            <Transitions>
-                <TransformOperationsTransition Property="RenderTransform" Duration="0:0:1" Easing=""/>
-            </Transitions>
-        </Border.Transitions>
-    </Border>
+    
+    <TextBox  />
+    <!-- <Border Height="100" Background="Red" HorizontalAlignment="Left"> -->
+    <!--     <Border.Styles> -->
+    <!--         <Style Selector="Border"> -->
+    <!--             <Setter Property="Width" Value="100"/> -->
+    <!--         </Style> -->
+    <!--         <Style Selector="Border:pointerover"> -->
+    <!--             <Setter Property="Width" Value="500"/> -->
+    <!--         </Style> -->
+    <!--     </Border.Styles> -->
+    <!--     <Border.Transitions> -->
+    <!--         <Transitions> -->
+    <!--             <DoubleTransition Duration="0:0:1" Property="Width" /> -->
+    <!--         </Transitions> -->
+    <!--     </Border.Transitions> -->
+    <!-- </Border> -->
+    
+    
+    <!-- <Border Width="100" Height="100" Background="Red"> -->
+    <!--     <Border.Styles> -->
+    <!--         <Style Selector="Border"> -->
+    <!--             <Setter Property="RenderTransform" Value="scaleY(1)"/> -->
+    <!--         </Style> -->
+    <!--         <Style Selector="Border:pointerover"> -->
+    <!--             <Setter Property="RenderTransform" Value="scaleY(0.75)"/> -->
+    <!--         </Style> -->
+    <!--     </Border.Styles> -->
+    <!--     <Border.Transitions> -->
+    <!--         <Transitions> -->
+    <!--             <TransformOperationsTransition Property="RenderTransform" Duration="0:0:1" Easing=""/> -->
+    <!--         </Transitions> -->
+    <!--     </Border.Transitions> -->
+    <!-- </Border> -->
+    
+    
 </Window>
