@@ -1,7 +1,7 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
     <PropertyGroup>
         <OutputType>WinExe</OutputType>
-        <TargetFramework>net6.0</TargetFramework>
+        <TargetFramework>net7.0</TargetFramework>
         <Nullable>enable</Nullable>
         <BuiltInComInteropSupport>true</BuiltInComInteropSupport>
         <ApplicationManifest>app.manifest</ApplicationManifest>
@@ -18,6 +18,15 @@
         <!--Condition below is needed to remove Avalonia.Diagnostics package from build output in Release configuration.-->
         <PackageReference Condition="'$(Configuration)' == 'Debug'" Include="Avalonia.Diagnostics" Version="11.0.0-preview6" />
         <PackageReference Include="Avalonia.Themes.Fluent" Version="11.0.0-preview6" />
-        <PackageReference Include="System.Reactive" Version="5.0.0" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <AvaloniaResource Include="ControlsStyle\Calendar.xaml" />
+      <AvaloniaResource Include="ControlsStyle\CalendarDayButton.xaml" />
+      <AvaloniaResource Include="ControlsStyle\CalendarItem.xaml" />
+      <None Remove="Assets\right.png" />
+      <AvaloniaResource Include="Assets\right.png" />
+      <None Remove="Assets\left.png" />
+      <AvaloniaResource Include="Assets\left.png" />
     </ItemGroup>
 </Project>

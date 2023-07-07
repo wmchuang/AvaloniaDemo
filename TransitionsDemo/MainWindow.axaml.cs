@@ -1,6 +1,6 @@
 using Avalonia.Controls;
 
-namespace ScrollDemo;
+namespace TransitionsDemo;
 
 public partial class MainWindow : Window
 {

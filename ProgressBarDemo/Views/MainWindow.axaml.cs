@@ -1,6 +1,6 @@
 using Avalonia.Controls;
 
-namespace ScrollDemo;
+namespace ProgressBarDemo.Views;
 
 public partial class MainWindow : Window
 {

@@ -4,19 +4,13 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
         x:Class="ScrollDemo.MainWindow"
-        ExtendClientAreaToDecorationsHint="True"
-        ExtendClientAreaChromeHints="NoChrome"
-        ExtendClientAreaTitleBarHeightHint="-1"
-        MaxHeight="38" MaxWidth="471"
+        SystemDecorations="None"
         Title="ScrollDemo">
     <Window.Styles>
-        <Style Selector="Window">
-            <Setter Property="BorderThickness" Value="0" />
-            <Setter Property="Padding" Value="0" />
-            <Setter Property="Background" Value="Transparent" />
-            <Setter Property="BorderBrush" Value="Transparent" />
-            <Setter Property="SystemDecorations" Value="None" />
+        <Style Selector="Window > Panel > Border">
+            <Setter Property="CornerRadius" Value="50"></Setter>
         </Style>
+        
 
         <Style Selector="ScrollViewer /template/ ScrollBar">
             <Setter Property="Width" Value="5" />
@@ -36,7 +30,7 @@
             <Setter Property="Stroke" Value="{DynamicResource ScrollBarTrackStroke}" />
             <Setter Property="Opacity" Value="1" />
         </Style>
-
+        
         <Style Selector="ScrollBar /template/ Thumb.thumb">
             <Setter Property="Background" Value="#BFBFBF" />
         </Style>
@@ -45,45 +39,43 @@
     </Window.Styles>
 
 
-    <Border CornerRadius="15">
-        <Grid>
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition />
-                <ColumnDefinition />
-            </Grid.ColumnDefinitions>
-            <ScrollBar Background="BurlyWood" Width="5"
-                       ViewportSize="150" MinWidth="3">
-            </ScrollBar>
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition />
+            <ColumnDefinition />
+        </Grid.ColumnDefinitions>
+        <ScrollBar Background="BurlyWood" Width="5"
+                   ViewportSize="150" MinWidth="3">
+        </ScrollBar>
 
-            <Border Grid.Column="1">
-                <ScrollViewer>
-                    <StackPanel Orientation="Vertical">
-                        <!-- <Border Width="20" Height="100" Background="Red"> -->
-                        <!--     <Border.Styles> -->
-                        <!--         <Style Selector="Border"> -->
-                        <!--             <Setter Property="RenderTransform" Value="rotate(0)"/> -->
-                        <!--         </Style> -->
-                        <!--         <Style Selector="Border:pointerover"> -->
-                        <!--             <Setter Property="RenderTransform" Value="scaleX(2)"/> -->
-                        <!--         </Style> -->
-                        <!--     </Border.Styles> -->
-                        <!--     <Border.Transitions> -->
-                        <!--         <Transitions> -->
-                        <!--             <TransformOperationsTransition Property="RenderTransform" Duration="0:0:1"/> -->
-                        <!--         </Transitions> -->
-                        <!--     </Border.Transitions> -->
-                        <!-- </Border> -->
-                        <Border Background="IndianRed" Height="150" />
-                        <Border Background="DarkOliveGreen" Height="150" />
-                        <Border Background="IndianRed" Height="150" />
-                        <Border Background="DarkOliveGreen" Height="150" />
-                        <Border Background="IndianRed" Height="150" />
-                        <Border Background="DarkOliveGreen" Height="150" />
-                        <Border Background="IndianRed" Height="150" />
-                        <Border Background="DarkOliveGreen" Height="150" />
-                    </StackPanel>
-                </ScrollViewer>
-            </Border>
-        </Grid>
-    </Border>
+        <!-- <Border Grid.Column="1"> -->
+        <!--     <ScrollViewer> -->
+        <!--         <StackPanel Orientation="Vertical"> -->
+        <!--             ~1~ <Border Width="20" Height="100" Background="Red"> @1@ -->
+        <!--             ~1~     <Border.Styles> @1@ -->
+        <!--             ~1~         <Style Selector="Border"> @1@ -->
+        <!--             ~1~             <Setter Property="RenderTransform" Value="rotate(0)"/> @1@ -->
+        <!--             ~1~         </Style> @1@ -->
+        <!--             ~1~         <Style Selector="Border:pointerover"> @1@ -->
+        <!--             ~1~             <Setter Property="RenderTransform" Value="scaleX(2)"/> @1@ -->
+        <!--             ~1~         </Style> @1@ -->
+        <!--             ~1~     </Border.Styles> @1@ -->
+        <!--             ~1~     <Border.Transitions> @1@ -->
+        <!--             ~1~         <Transitions> @1@ -->
+        <!--             ~1~             <TransformOperationsTransition Property="RenderTransform" Duration="0:0:1"/> @1@ -->
+        <!--             ~1~         </Transitions> @1@ -->
+        <!--             ~1~     </Border.Transitions> @1@ -->
+        <!--             ~1~ </Border> @1@ -->
+        <!--             <Border Background="IndianRed" Height="150" /> -->
+        <!--             <Border Background="DarkOliveGreen" Height="150" /> -->
+        <!--             <Border Background="IndianRed" Height="150" /> -->
+        <!--             <Border Background="DarkOliveGreen" Height="150" /> -->
+        <!--             <Border Background="IndianRed" Height="150" /> -->
+        <!--             <Border Background="DarkOliveGreen" Height="150" /> -->
+        <!--             <Border Background="IndianRed" Height="150" /> -->
+        <!--             <Border Background="DarkOliveGreen" Height="150" /> -->
+        <!--         </StackPanel> -->
+        <!--     </ScrollViewer> -->
+        <!-- </Border> -->
+    </Grid>
 </Window>

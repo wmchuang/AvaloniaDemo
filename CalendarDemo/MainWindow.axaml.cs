@@ -1,6 +1,6 @@
 using Avalonia.Controls;
 
-namespace ScrollDemo;
+namespace CalendarDemo;
 
 public partial class MainWindow : Window
 {
