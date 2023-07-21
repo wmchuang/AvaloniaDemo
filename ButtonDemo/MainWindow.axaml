@@ -1,0 +1,86 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+        x:Class="ButtonDemo.MainWindow"
+        Title="ButtonDemo">
+  <Window.Styles>
+        <!-- <Style Selector="Button.TestSpecial"> -->
+        <!--     <Setter Property="Template"> -->
+        <!--         <ControlTemplate TargetType="Button"> -->
+        <!--             <Grid Background="LightCoral" x:Name="grid"> -->
+        <!--                 <StackPanel Orientation="Horizontal" VerticalAlignment="Center" x:Name="stackpanel" -->
+        <!--                             HorizontalAlignment="Center"> -->
+        <!--                     <Border x:Name="border" Background="Yellow" Width="15" Height="15" -->
+        <!--                             HorizontalAlignment="Center" Margin="0,0,0,0" VerticalAlignment="Center"> -->
+        <!--                     </Border> -->
+        <!--                     <Button x:Name="button" Background="Red" Width="15" Height="15" -->
+        <!--                             HorizontalAlignment="Center" Margin="0,0,0,0" VerticalAlignment="Center"> -->
+        <!--                     </Button> -->
+        <!--                     <TextBlock x:Name="txt2" Text="{TemplateBinding Content}" VerticalAlignment="Center"></TextBlock> -->
+        <!--                 </StackPanel> -->
+        <!--             </Grid> -->
+        <!--         </ControlTemplate> -->
+        <!--     </Setter> -->
+        <!-- </Style> -->
+        <!-- <Style Selector="Button.TestSpecial:pointerover /template/ Grid#grid"> -->
+        <!--     <Setter Property="Background" Value="LightGoldenrodYellow"></Setter> -->
+        <!-- </Style> -->
+        <!-- <Style Selector="Button.TestSpecial:pointerover /template/ StackPanel#stackpanel"> -->
+        <!--     <Setter Property="Orientation" Value="Vertical"></Setter> -->
+        <!-- </Style> -->
+        <!-- <Style Selector="Button.TestSpecial:pointerover /template/ Border#border"> -->
+        <!--     <Setter Property="Background" Value="Blue"></Setter> -->
+        <!-- </Style> -->
+        
+        <Style Selector="Button:pointerover /template/ ContentPresenter">
+            <Setter Property="Background" Value="Red"></Setter>
+        </Style>
+        
+    </Window.Styles>
+    <Window.Resources>
+        <ControlTheme TargetType="Button" x:Key="SpecialButton">
+            <Setter Property="Template">
+                <ControlTemplate TargetType="Button">
+                    <Grid Background="LightCoral" x:Name="grid">
+                        <StackPanel Orientation="Horizontal" VerticalAlignment="Center" x:Name="stackpanel"
+                                    HorizontalAlignment="Center">
+                            <Border x:Name="border" Background="Yellow" Width="15" Height="15"
+                                    HorizontalAlignment="Center" Margin="0,0,0,0" VerticalAlignment="Center">
+                            </Border>
+                            <Button x:Name="button" Background="Red" Width="15" Height="15"
+                                    HorizontalAlignment="Center" Margin="0,0,0,0" VerticalAlignment="Center">
+                            </Button>
+                            <TextBlock x:Name="txt2" Text="{TemplateBinding Content}" VerticalAlignment="Center"></TextBlock>
+                        </StackPanel>
+                    </Grid>
+                </ControlTemplate>
+            </Setter>
+            <Style Selector="^:pointerover /template/ Grid#grid">
+                <Setter Property="Background" Value="LightGoldenrodYellow"></Setter>
+            </Style>
+            <Style Selector="^:pointerover /template/ StackPanel#stackpanel">
+                <Setter Property="Orientation" Value="Vertical"></Setter>
+            </Style>
+            <Style Selector="^:pointerover /template/ Border#border">
+                <Setter Property="Background" Value="Blue"></Setter>
+            </Style>
+            <Style Selector="^:pointerover /template/ Button#button">
+                <Setter Property="Background" Value="Green"></Setter>
+            </Style>
+        </ControlTheme>
+    </Window.Resources>
+    <Border Background="LightGreen" ClipToBounds="True" CornerRadius="0,0,5,5">
+        <Grid>
+            <StackPanel Orientation="Horizontal">
+                <Button Width="200" Height="80" Margin="10,0" Theme="{StaticResource SpecialButton}">123</Button>
+                <Button Width="200" Height="80" Classes="TestSpecial" Background="Aqua">123</Button>
+            </StackPanel>
+        </Grid>
+    </Border>
+    <!--疑问-->
+    <!-- 第一个按钮用ControlTheme写的  第二个是用Style写的 但是第一个按钮的行为并没有按照预期 (鼠标悬浮的时候模板里面的Button背景色没有变化,并且本身模板 -->
+    <!-- 里面的背景色竟然是和第一个border的背景色相同并且无法修改  调换border和button的位置 button背景色可以是自己设置的,但是鼠标悬停还是没有改变,但是使用Style -->
+    <!-- 的行为就完全按照预期的) -->
+</Window>

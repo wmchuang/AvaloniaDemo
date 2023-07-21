@@ -19,22 +19,16 @@
     </ItemGroup>
 
     <ItemGroup>
-        <PackageReference Include="Avalonia" Version="11.0.0-preview6" />
-        <PackageReference Include="Avalonia.Desktop" Version="11.0.0-preview6" />
+        <PackageReference Include="Avalonia" Version="11.0.0" />
+        <PackageReference Include="Avalonia.Desktop" Version="11.0.0" />
         <!--Condition below is needed to remove Avalonia.Diagnostics package from build output in Release configuration.-->
         <PackageReference Condition="'$(Configuration)' == 'Debug'" Include="Avalonia.Diagnostics" Version="11.0.0-preview6" />
-        <PackageReference Include="Avalonia.ReactiveUI" Version="11.0.0-preview6" />
-        <PackageReference Include="Avalonia.Themes.Fluent" Version="11.0.0-preview6" />
-        <PackageReference Include="ReactiveUI" Version="18.4.34" />
-        <PackageReference Include="SharpDX.D3DCompiler" Version="4.2.0" />
-        <PackageReference Include="SharpDX.Direct3D11" Version="4.2.0" />
+        <PackageReference Include="Avalonia.ReactiveUI" Version="11.0.0" />
+        <PackageReference Include="Avalonia.Themes.Fluent" Version="11.0.0" />
+        <PackageReference Include="ReactiveUI" Version="19.4.1" />
     </ItemGroup>
 
     <ItemGroup>
       <UpToDateCheckInput Remove="D3DDemo\GpuDemo.axaml" />
-    </ItemGroup>
-
-    <ItemGroup>
-      <ClCompile Include="D3DDemo\MiniCube.fx" />
     </ItemGroup>
 </Project>
