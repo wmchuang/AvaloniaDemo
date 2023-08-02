@@ -5,5 +5,5 @@
         mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
         x:Class="AotDemo.MainWindow"
         Title="AotDemo">
-    Welcome to Avalonia!
+    <TextBlock Classes="Success" Text="Welcome to Avalonia!" />
 </Window>

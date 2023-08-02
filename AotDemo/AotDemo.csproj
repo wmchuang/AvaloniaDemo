@@ -14,9 +14,13 @@
         <StripSymbols>true</StripSymbols>
     </PropertyGroup>
 
-    <ItemGroup>
-        <TrimmerRootDescriptor Include="Roots.xml" />
-    </ItemGroup>
+<!--    https://github.com/dotnet/runtimelab/blob/feature/NativeAOT/docs/using-nativeaot/reflection-in-aot-mode.md-->
+        <ItemGroup>
+            <RdXmlFile Include="RD.xml" />
+        </ItemGroup>
+<!--    <ItemGroup>-->
+<!--        <TrimmerRootDescriptor Include="Roots.xml" />-->
+<!--    </ItemGroup>-->
 
     <ItemGroup>
         <PackageReference Include="Avalonia" Version="11.0.0" />
@@ -33,5 +37,6 @@
           <PrivateAssets>all</PrivateAssets>
           <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
         </PackageReference>
+        <PackageReference Include="Semi.Avalonia" Version="11.0.0" />
     </ItemGroup>
 </Project>
