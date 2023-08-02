@@ -61,6 +61,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "D3DDemo", "D3DDemo\D3DDemo.
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BenchmarkDemo", "BenchmarkDemo\BenchmarkDemo.csproj", "{6C49AAA1-1B36-45B0-A9DC-D14E5E711C4F}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AotDemo", "AotDemo\AotDemo.csproj", "{9C68FBBA-19CC-4A35-B257-883E84808A9D}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -183,6 +185,10 @@ Global
 		{6C49AAA1-1B36-45B0-A9DC-D14E5E711C4F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6C49AAA1-1B36-45B0-A9DC-D14E5E711C4F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6C49AAA1-1B36-45B0-A9DC-D14E5E711C4F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9C68FBBA-19CC-4A35-B257-883E84808A9D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9C68FBBA-19CC-4A35-B257-883E84808A9D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9C68FBBA-19CC-4A35-B257-883E84808A9D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9C68FBBA-19CC-4A35-B257-883E84808A9D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
