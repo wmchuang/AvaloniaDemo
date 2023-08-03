@@ -2,8 +2,15 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+        xmlns:viewModels="clr-namespace:AotDemo.ViewModels"
+        mc:Ignorable="d" d:DesignWidth="500" d:DesignHeight="450"
+        Width="500" Height="450"
         x:Class="AotDemo.MainWindow"
+        x:DataType="viewModels:MainViewModel"
         Title="AotDemo">
-    <TextBlock Classes="Success" Text="Welcome to Avalonia!" />
+    <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center" Spacing="20">
+        <TextBlock Classes="Success" Text="{Binding FirstName}" />
+
+        <Button Content="Click Me" Command="{Binding ButtonCommand}"></Button>
+    </StackPanel>
 </Window>
